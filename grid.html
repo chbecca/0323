@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary:rgb(139, 111, 111);
+            --secondary:#fa0;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,minmax(300px,1fr));
+            grid-template-rows: repeat(5,minmax(100px,1fr));
+            grid-gap: 5px;
+        }
+        .box{
+            background-color:var(--primary);
+        }
+        .box:nth-of-type(3n){
+            background-color: var(--secondary);
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+</body>
+</html>
